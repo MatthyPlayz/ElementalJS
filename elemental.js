@@ -1,3 +1,8 @@
+var config = {
+  useConfig: true,
+  port: 1000
+}
+
 const express = require("express"),
     app = express(),
 	server = require('http').createServer(app),
@@ -13,6 +18,6 @@ var visual = {
     server.listen(port);
   }
 }
-visual.port = 8070;
-visual.print("Hello!");
-visual.listen(visual.port);
+if(config.useConfig) {
+    visual.port = config.port
+}
