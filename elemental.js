@@ -18,6 +18,6 @@ var visual = {
     server.listen(port);
   }
 }
-if(config.useConfig) {
+if(config.useConfig === true) {
     visual.port = config.port
 }
